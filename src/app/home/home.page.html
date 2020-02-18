@@ -1,0 +1,31 @@
+<ion-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides>
+
+    <ion-slide>
+      <div class="slide">
+        <img class="spoti" src="../../assets/img/spoti.png"/>
+        <h2>Welcome</h2>
+        <p>The <b> DAWAFY </b> is a app to manage your music.</p>
+      </div>
+      <ion-button (click)="skip()" fill="clear">Skip</ion-button>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../../assets/img/clave.png"/>
+      <p>... set your favorite songs ...</p>
+      <ion-button (click)="skip()" fill="clear">Skip</ion-button>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../../assets/img/nota.png"/>
+      <h2>Ready to Play?</h2>
+      <ion-button (click)="skip()" fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add album</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="stacked"> Name of album </ion-label>
+    <ion-input [(ngModel)]="name" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"> Artist </ion-label>
+    <ion-input [(ngModel)]="artist" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"> Year </ion-label>
+    <ion-input [(ngModel)]="year" type="number"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label>Image</ion-label>
+      <ion-select [(ngModel)]="image">
+        <ion-select-option value="beatles">Beatles</ion-select-option>
+        <ion-select-option value="christmas">Christmas</ion-select-option>
+        <ion-select-option value="destrangis">Destrangis</ion-select-option>
+        <ion-select-option value="iglesias">Iglesias</ion-select-option>
+        <ion-select-option value="jackson">Jackson</ion-select-option>        
+        <ion-select-option value="ot">Ot</ion-select-option>        
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="item_favorite">
+      <ion-checkbox color="primary" (ionChange)="ionChange($event.detail.checked, i)"></ion-checkbox>
+      <ion-label class="favorite"> Favorite </ion-label>
+      </ion-item>
+
+    <ion-button (click)='add_album()' expand='block'> Add Album </ion-button>
+
+
+</ion-content>
